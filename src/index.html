@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>AI Chat</title>
+    </head>
+    <body class="flex flex-col items-center justify-center w-screen min-h-screen bg-gray-100 text-gray-800 p-10">
+        <div aria-live="assertive" class="pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start sm:p-6">
+            <div class="flex w-full flex-col items-center space-y-4 sm:items-end">
+                <div id="notification" class="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                    <div class="p-4">
+                        <div class="flex items-center">
+                            <div class="flex w-0 flex-1 justify-between">
+                                <p id="state" class="w-0 flex-1 text-sm font-medium text-white"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col flex-grow w-full max-w-xl bg-white shadow-xl rounded-lg overflow-hidden">
+            <div id="chatbox" class="flex flex-col flex-grow h-0 p-4 overflow-auto"></div>
+            <div class="bg-gray-300 p-4">
+                <input
+                    id="message"
+                    class="flex items-center h-10 w-full rounded px-3 text-sm"
+                    type="text"
+                    maxlength="200"
+                    placeholder="Type your message…"
+                >
+            </div>
+        </div>
+        <script src="./custom.js"></script>
+    </body>
+</html>
